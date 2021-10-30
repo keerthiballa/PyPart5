@@ -5,4 +5,12 @@ def is_palindrome(value: str) -> bool:
     :param value: A string
     :return: A boolean
     """
-    pass  # remove pass statement and implement me
+
+    return value.replace(" ", "").lower() == value[::-1].replace(" ","").lower()
+
+# ballakeerthi@zipcodes-MacBook-Pro-3 PyPart5 % python3 -m unittest test_palindrome.py
+# .
+# ----------------------------------------------------------------------
+# Ran 1 test in 0.000s
+#
+# OK

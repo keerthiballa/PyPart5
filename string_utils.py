@@ -1,30 +1,41 @@
-
-def str_len(str_in: str) -> str:
+def str_len(str_in: str) -> int:
     """
     Given a string parameter, this function should return the length of the parameter.
     """
-    pass  # remove pass statement and implement me
+    return len(str_in)
+
+
+# str_len('Hello!')
 
 
 def first_char(str_in: str) -> str:
     """
     Given a string parameter, this function should return the first letter of the parameter.
     """
-    pass  # remove pass statement and implement me
+    return str_in[0]
+
+
+# first_char('Hello!')
 
 
 def last_char(str_in: str) -> str:
     """
     Given a string parameter, this function should return the last letter of the parameter..
     """
-    pass  # remove pass statement and implement me
+    return str_in[len(str_in) - 1]
+
+
+# last_char('Hello!')
 
 
 def input_has_substring(str_in: str, sub_str_in: str) -> bool:
     """
     This function determines if the substring exists within the string. Returns True or False.
     """
-    pass  # remove pass statement and implement me
+    return sub_str_in in str_in
+
+
+# input_has_substring('Hello!', 'ell')
 
 
 def substring(str_in: str, start: int, stop: int) -> str:
@@ -36,7 +47,10 @@ def substring(str_in: str, start: int, stop: int) -> str:
     start -- starting position of the input parameter to start the substring (inclusive)
     stop -- stopping position of the input parameter to stop the substring (exclusive)
     """
-    pass  # remove pass statement and implement me
+    return str_in[start:stop]
+
+
+# substring('Congratulations!', 2, 5)
 
 
 def opposite_case(str_in: str) -> str:
@@ -45,4 +59,15 @@ def opposite_case(str_in: str) -> str:
     Example: 
     When input = "Python" the function returns "pYTHON"
     """
-    pass  # remove pass statement and implement me
+    return str_in.swapcase()
+
+# opposite_case('Hello!')
+
+# ballakeerthi@zipcodes-MacBook-Pro-3 PyPart5 % python3 -m unittest test_string_utils.py
+# ./Users/ballakeerthi/dev/PyPart5/test_string_utils.py:41: DeprecationWarning: Please use assertEqual instead.
+#   self.assertEquals(expected, string_utils.input_has_substring(word, substring))
+# .....
+# ----------------------------------------------------------------------
+# Ran 6 tests in 0.001s
+#
+# OK
